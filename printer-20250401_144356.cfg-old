@@ -1,5 +1,3 @@
-[include mmu/base/*.cfg]
-[include mmu/optional/client_macros.cfg]
 [include mainsail.cfg]
 [include homing.cfg]
 [include stealthburner_leds.cfg]
@@ -48,8 +46,8 @@ canbus_uuid:d2316feb1151
 [mcu EBBCan]
 canbus_uuid:0bdb9d972bc4
 
-#[mcu MMBCan]
-#canbus_uuid:d48960585f93
+[mcu MMBCan]
+canbus_uuid:d48960585f93
 
 [force_move]
 enable_force_move: True
@@ -233,13 +231,13 @@ sense_resistor: 0.110
 stealthchop_threshold: 999999
 
 # Entry sensor (before extruder gears)
-#[filament_switch_sensor entry_sensor]
-#switch_pin: EBBCan: PB6
-#pause_on_runout: True
+[filament_switch_sensor entry_sensor]
+switch_pin: EBBCan: PB6
+pause_on_runout: True
 
-#[filament_switch_sensor toolhead_sensor]
-#switch_pin: EBBCan: PC13
-#pause_on_runout: True
+[filament_switch_sensor toolhead_sensor]
+switch_pin: EBBCan: PC13
+pause_on_runout: True
 
 [bed_mesh]
 speed: 300
